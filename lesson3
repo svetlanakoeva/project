@@ -1,0 +1,89 @@
+#это первое задание ,  работает,
+def division():
+
+    a = float(input('введите первое число: '))
+    b = float(input('введите второе число: '))
+    if b == 0:
+        print('на ноль делить нельзя')
+    else:
+        res = float(a / b)
+        return  res
+print(division())
+
+
+#  первое задание с помощью трай эксцепт. и все равно None в конце выходит
+def division():
+    try:
+        a = float(input('введите первое число: '))
+        b = float(input('введите второе число: '))
+        res = float(a / b)
+        return res
+    except ZeroDivisionError:
+
+        print('на ноль делить нельзя')
+
+print(division())
+
+# второе задание
+def information(name, surname, BD, sity, email, phonenumber):
+    print(f'данные о пользователе: {name} {surname}, {BD} года рождения ,{sity}, {email}, {phonenumber}' )
+information(name = input('введите имя: '),surname = input('введите фамилию: '), BD = input('введите дату рождения: '),sity = input('введите город проживания: '), email = input('адрес электронной почты: '),phonenumber = input('номер телефона:  ') )
+
+
+#третье задание все работает, но выглядит ужасно.
+def my_func():
+    a = int(input('введите первое значение:  '))
+    b = int(input('введите второе значение:  '))
+    c = int(input('введите третье значение:  '))
+    if a > b and b > c :
+        res = a + b
+        print(f'сумма наибольших аргументов= {res}')
+    if a > b and c > b:
+        res = a + c
+        print(f'сумма наибольших аргументов = {res}')
+    if c > b and b > a and c > a:
+        res = b + c
+        print(f'сумма наибольших аргументов = {res}')
+    if b > c and b > a and c > a:
+        res = b + c
+        print(f'сумма наибольших аргументов = {res}')
+    if b > a and a > c :
+        res = b + a
+        print(f'сумма наибольших аргументов = {res}')
+
+    if a == b or b == a or c == a:
+        res = ('найдены равные аргументы')
+
+        return res
+
+print(my_func())
+
+#  4 задание работает , второй вариант решить через цикл не получилось. ТУПЛЮ.
+def my_func(x, y):
+    res = x ** y
+    print(res)
+(my_func(2, -3 ))
+
+#задание 6 ,
+def int_func():
+    n = input('enter words : ').lower().title()
+    print(n)
+int_func()
+
+
+# задание 5 решаю целый день, не хватает времени и знаний.
+def myf():
+    while True:
+        a = input('введите числа через пробел : ').split()
+        b = list(map(int, a))
+        d = sum(b)
+        print(d)
+        e = input('продолжите ввод :').split()
+        c = list(map(int, e))
+        n = sum(c)
+        print(n + d)
+
+
+myf()
+
+
